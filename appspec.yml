@@ -1,0 +1,20 @@
+version: 0.0 # (1)
+os: linux
+files:
+    -   source: / # (2)
+        destination: /home/ubuntu/yobolove-nextjs-typescript
+
+file_exists_behavior: OVERWRITE
+
+permissions: # (1)
+    -   object: /
+        pattern: "**"
+        mode: 777
+        owner: ubuntu
+        group: ubuntu
+
+hooks: # (1)
+    ApplicationStart:
+        -   location: scripts/start.sh
+            timeout: 300
+            runas: ubuntu

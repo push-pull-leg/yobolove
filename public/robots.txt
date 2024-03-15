@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /withdrawal
+Disallow: /account
+Disallow: /account/notification
+Disallow: /center/withdrawal
+Disallow: /center/account*
+Sitemap: https://yobolove.co.kr/sitemap.xml

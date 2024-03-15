@@ -1,0 +1,46 @@
+{
+    "name": "yobolove-nextjs-typescript",
+    "short_name": "요보사랑",
+    "theme_color": "#ff567c",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/android-icon-36x36.png",
+            "type": "image/png",
+            "sizes": "36x36"
+        },
+        {
+            "src": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/android-icon-48x48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/android-icon-72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/android-icon-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/android-icon-144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/android-icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}

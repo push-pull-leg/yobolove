@@ -1,0 +1,53 @@
+stage: ${env.STAGE}
+plugins:
+    - serverless-ephemeral
+    - serverless-dotenv-plugin
+    - serverless-plugin-warmup
+package:
+    exclude:
+        - package.json
+        - package-lock.json
+        - node_modules/**
+        - .ephemeral/**
+custom:
+    warmup:
+        default:
+            enabled: true
+            events:
+                -   schedule: rate(5 minutes)
+            concurrency: 10
+            verbose: true
+            logRetentionInDays: 10
+            prewarm: true
+            tracing: true
+
+useDotenv: true
+yobolove:
+    component: "@sls-next/serverless-component@3.7.0" # use latest version, currently 3.6.0
+    inputs:
+        domain:
+            - ${env.SERVERLESS_SUBDOMAIN}
+            - "kslab.team"
+        runtime: nodejs16.x
+        cloudfront:
+            distributionId: ${env.SERVERLESS_CLOUDFRONT_DISTRIBUTION_ID}
+            comment: "Serverless Cloudfront distribution for yobolove with ${stage}"
+            certificate:
+                cloudFrontDefaultCertificate: false # specify false and one of IAM/ACM certificates, or specify true and omit IAM/ACM inputs for default certificate
+                acmCertificateArn: "arn:aws:acm:us-east-1:788610043365:certificate/3330c8a9-cd8c-4f3f-8d60-c8a06c391cd1"
+                sslSupportMethod: "sni-only" # can be omitted, defaults to "sni-only"
+                minimumProtocolVersion: "TLSv1.2_2019" # can be omitted, defaults to "TLSv1.2_2019"
+
+        publicDirectoryCache:
+            value: public, max-age=604800
+            test: /\.(gif|jpe?g|png|txt|xml)$/i
+
+        name:
+            defaultLambda: yobolove-${stage}-default
+            apiLambda: yobolove-${stage}-api
+            imageLambda: yobolove-${stage}-image
+
+        removeOldLambdaVersions: false
+        bucketName: yobolove-${stage}
+        bucketRegion: ap-northeast-2
+        description: "Lambda Distribution for yobolove with ${stage}"

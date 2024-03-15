@@ -1,0 +1,5 @@
+{{#eachWithPublic groups}}
+    {{#unless allChildrenHaveOwnDocument}}
+        {{> members.group}}
+    {{/unless}}
+{{/eachWithPublic}}

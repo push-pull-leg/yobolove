@@ -1,0 +1,76 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "name": "요보사랑 frontend 정의문서",
+    "sort": [
+        "source-order"
+    ],
+    "entryPointStrategy": "expand",
+    "entryPoints": [
+        "./src"
+    ],
+    "theme": "default",
+    "darkHighlightTheme": "dark-plus",
+    "out": "docs/typedoc",
+    "mergeModulesRenameDefaults": true,
+    "mergeModulesMergeMode": "project",
+    "favicon": "https://kslab.cdn.ntruss.com/tech/yobolove/assets/images/favicon.ico",
+    "footerTypedocVersion": true,
+    "footerDate": true,
+    "footerTime": true,
+    "readme": "./README.md",
+    "hideGenerator": true,
+    "exclude": [
+        "**/react-app-env*",
+        "**/reportWebVitals*",
+        "**/*.tests.ts*",
+        "**/*.tests.tsx*",
+        "**/*.test.ts*",
+        "**/*.test.tsx*",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "**/*.cy.ts",
+        "**/*.cy.tsx",
+        "cypress",
+        "cypress/*",
+        "cypress/**",
+        "node_modules",
+        "node_modules/*",
+        "node_modules/**",
+        "coverage",
+        "coverage/*",
+        "coverage/**",
+        "docs",
+        "docs/*",
+        "docs/**",
+        "sassdoc/*",
+        "sassdoc/**",
+        ".next",
+        ".next/*",
+        ".next/**",
+        "script/*",
+        "script/**",
+        "*.config.js",
+        ".babelrc"
+    ],
+    "categorizeByGroup": true,
+    "navigationLinks": {
+        "Module": "/docs/typedoc/modules.html",
+        "GitHub": "https://github.com/kseniorlab/yobolove-nextjs-typescript",
+        "API": "https://api.dev.yobolove.co.kr/swagger-ui/index.html#/",
+        "Cypress": "https://dashboard.cypress.io/projects/nr3ifd/runs",
+        "Sentry": "https://sentry.io/organizations/kseniorlab/issues/?project=4503979229511682&referrer=onboarding-setup-docs-on-complete",
+        "Dev": "https://dev.yobolove.co.kr",
+        "Stg": "https://stg.yobolove.co.kr",
+        "Prod": "https://yobolove.co.kr"
+    },
+    "modifierTags": [
+        "@gtm"
+    ],
+    "visibilityFilters": {
+        "protected": true,
+        "private": true,
+        "inherited": true,
+        "external": true,
+        "@gtm": true
+    }
+}
